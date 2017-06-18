@@ -57,7 +57,7 @@ This should compile into a JSON part description and net list, like so:
       "props": {
         "ac": 3.0,
         "f": 2000.0,
-      }
+      },
       "nets": [3, 1]
     },
     {
@@ -66,7 +66,7 @@ This should compile into a JSON part description and net list, like so:
       "model": "platonic.res",
       "props": {
         "value": 1000.0
-      }
+      },
       "nets": [3, 2]
     },
     {
@@ -75,7 +75,7 @@ This should compile into a JSON part description and net list, like so:
       "model": "platonic.cap",
       "props": {
         "value": 0.00000001 
-      }
+      },
       "nets": [2, 1]
     },
   ]
