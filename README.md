@@ -13,8 +13,7 @@ easier, such as:
 
 ## Example
 
-For example, the following `eccl` code should produce a simple RC circuit 
-schematic:
+For example, the following `eccl` code describes a simple RC circuit.
 
 ```
 from platonic import res, cap, voltage
@@ -31,6 +30,57 @@ block simpleLowPassFilter {
 }
 ```
 
+This should compile into a JSON part description and net list, like so:
+
+```json
+{
+  "name": "simpleLowPassFilter",
+  "pins": [
+    {
+      "id": 1,
+      "name": "GND",
+      "net": 1,
+      "symbol": "lollipop"
+    },
+    {
+      "id": 2,
+      "name": "Out",
+      "net": 2,
+      "symbol": "lollipop"
+    }
+  ],
+  "parts": [
+    {
+      "id": 1,
+      "name": "V1",
+      "model": "platonic.voltage",
+      "props": {
+        "ac": 3.0,
+        "f": 2000.0,
+      }
+      "nets": [3, 1]
+    },
+    {
+      "id": 2,
+      "name": "R1",
+      "model": "platonic.res",
+      "props": {
+        "value": 1000.0
+      }
+      "nets": [3, 2]
+    },
+    {
+      "id": 3,
+      "name": "C1",
+      "model": "platonic.cap",
+      "props": {
+        "value": 0.00000001 
+      }
+      "nets": [2, 1]
+    },
+  ]
+}
+```
 ## Aims
 
 * Allow the user to specify part details as late as possible. Instead of using
