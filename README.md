@@ -32,7 +32,7 @@ block simpleLowPassFilter {
 
 This should compile into a JSON part description and net list, like so:
 
-```json
+```javascript
 {
   "name": "simpleLowPassFilter",
   "pins": [
