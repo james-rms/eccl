@@ -53,7 +53,7 @@ This should compile into a JSON part description and net list, like so:
     {
       "id": 1,
       "name": "V1",
-      "model": "platonic.voltage",
+      // here lies anything imported from platonic.voltage
       "props": {
         "ac": 3.0,
         "f": 2000.0,
@@ -63,7 +63,7 @@ This should compile into a JSON part description and net list, like so:
     {
       "id": 2,
       "name": "R1",
-      "model": "platonic.res",
+      // here lies anything imported from platonic.res
       "props": {
         "value": 1000.0
       },
@@ -72,7 +72,7 @@ This should compile into a JSON part description and net list, like so:
     {
       "id": 3,
       "name": "C1",
-      "model": "platonic.cap",
+      // here lies anything imported from platonic.cap
       "props": {
         "value": 0.00000001 
       },
